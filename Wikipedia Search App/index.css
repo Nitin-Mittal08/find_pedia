@@ -3,7 +3,7 @@
     height:6rem;
     background-color: blueviolet;
     margin-top: 0;
-
+    color: white;
     margin-bottom: 1rem;
     margin-right: 1rem;
     padding: 1rem;
@@ -51,6 +51,8 @@ button {
         text-align: left;
         white-space: normal;
         font-style: italic;
+        color: blueviolet;
+        text-decoration: none;
 }
 .resultItem:hover{
         border-left:5px solid #443328;
