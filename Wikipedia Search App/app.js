@@ -2,12 +2,22 @@ let searchForm = document.getElementById('searchForm');
 
 let searchInput = document.getElementById('searchInput');
 
+let resultList = document.getElementById("resultsList");
+
 
 searchForm.addEventListener('submit', (e)=> {
 e.preventDefault();
 displaySearchResults(searchInput.value);
 })
 function displaySearchResults(x){
+    if(x.length<1){
+
+        resultList.innerText = "Enter a valid value";
+
+    }else{
+
+
+    
     let url = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${x}`;
 
     fetch(url)
@@ -24,9 +34,11 @@ function displaySearchResults(x){
 
 }
 
+};
+
 function resultsOnPage(myArray){
-    resultsList.innerHTML = " ";
-    resultsList.insertAdjacentHTML('beforeend', `<h2>Search Results for ${searchInput.value} </h2>`);
+    resultList.innerHTML = " ";
+    resultList.insertAdjacentHTML('beforeend', `<h2>Search Results for ${searchInput.value} </h2>`);
 
     myArray.forEach(function(item){
     let itemTitle = item.title;
