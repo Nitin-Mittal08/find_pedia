@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>Find Pedia</h1>
+    <div id="header"><h1>Find Pedia</h1></div>
+    
     <form id="searchForm">
-        <input type="text" id="searchInput"/>
-        <button id="searchButton">Search</button>
+        <input id="searchInput" type="text" autocomplete="off">
+        <button for="search">Search</button>
     </form>
-    <div id="output"></div>
+        <div id="resultsList"></div>
+    <div><p>View the code at:</p><a href="https://github.com/Nitin-Mittal08/find_pedia">Github</a></div>    
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
+
 </html>
